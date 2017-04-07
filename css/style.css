@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@keyframes flashing {
+	0% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#fcontact input {
+	margin-top: 0.5em;
+}
+
+#fcontact .contact-form, #fcontact .confirm-area, #fcontact .result-area {
+	margin-bottom: 1.0em;
+}
+
+#fcontact .contact-form textarea[readonly], #fcontact .contact-form input[disabled] {
+	opacity: 0.5;
+
+	pointer-events: none;
+}
+#fcontact .contact-form .required {
+	color: #f00;
+}
+#fcontact .contact-form input.confirm {
+	display: none;
+}
+#fcontact .contact-form input.logout {
+	float: right;
+}
+#fcontact.confirm .contact-form input.submit {
+	display: none;
+}
+#fcontact.confirm .contact-form input.confirm {
+	display: inline-block;
+}
+#fcontact.logout .contact-form input.logout {
+	display: none;
+}
+
+#fcontact .confirm-area .value {
+	padding: 0  1.0em;
+	text-indent: 1.0em;
+}
+
+#fcontact .result-area .cause {
+	padding: 0 1.0em;
+	font-style: oblique;
+}
+
+#fcontact .overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+}
+
+#fcontact .overlay .message, #fcontact .overlay .dialog {
+	display: none;
+}
+
+#fcontact .overlay.message .message {
+	display: block;
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 100%;
+	margin: auto;
+	color: #fff;
+	text-align: center;
+
+	animation: flashing 1.5s infinite;
+}
+
+#fcontact .overlay.dialog .dialog {
+	display: block;
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 90vw;
+	max-width: 300px;
+	margin: auto;
+	border: 3px solid #000;
+	background-color: #fff;
+	text-align: center;
+}
