@@ -1,20 +1,23 @@
 // fcontact js
 
+var fcontact_overlay_id = 'fcontact-overlay';
+
 /*
  * DOM読み込み時
  */
-jQuery(document).ready(function() {
-	var form = jQuery('#fcontact .contact-form');
+jQuery(document).ready(function($) {
+	var form = $('#fcontact .contact-form');
+	createOverlay();
 
 	/*
 	 * 送信、確認ボタン
 	 */
-	jQuery('#fcontact .contact-form input[type=submit]').click(function() {
+	$('#fcontact .contact-form input[type=submit]').click(function() {
 		if (!validate(form.get()[0])) {
 			return true;
 		}
 
-		ref = jQuery(this);
+		ref = $(this);
 		/*
 		 * ログイン状態で処理を分ける
 		 */
@@ -60,35 +63,35 @@ jQuery(document).ready(function() {
 	/*
 	 * 確認エリアの送信ボタン
 	 */
-	jQuery('#fcontact .confirm-area input[type=submit]').click(function() {
+	$('#fcontact .confirm-area input[type=submit]').click(function() {
 		var formdata = form.serialize();
 		sendmail(formdata);
 		return false;
 	});
 
 	// キャンセルボタン
-	jQuery('#fcontact .confirm-area input[type=reset]').click(function() {
+	$('#fcontact .confirm-area input[type=reset]').click(function() {
 		form.find('textarea').prop('readonly', false);
 		form.find('input.confirm,input.clear,input.logout').prop('disabled', false);
-		jQuery('html,body').animate({ scrollTop: form.offset().top }, 'fast');
-		jQuery('#fcontact .confirm-area').hide();
+		$('html,body').animate({ scrollTop: form.offset().top }, 'fast');
+		$('#fcontact .confirm-area').hide();
 		return false;
 	});
 
 	// ログアウトボタン
-	jQuery('#fcontact .contact-form .logout').click(function() {
+	$('#fcontact .contact-form .logout').click(function() {
 		fbLogout();
 		return false;
 	});
 
 	// 戻るボタン
-	jQuery('#fcontact .result-area .back').click(function() {
+	$('#fcontact .result-area .back').click(function() {
 		window.location.reload();
 		return false;
 	});
 
 	// エラー時ダイアログの閉じるボタン
-	jQuery('#fcontact .overlay .close').click(function() {
+	$('#fcontact-overlay .close').click(function() {
 		hideOverlay('dialog', false);
 		return true;
 	});
@@ -102,12 +105,24 @@ function validate(form) {
 	return form.checkValidity();
 }
 
+function createOverlay() {
+	// DOMエレメントの追加
+	var element = jQuery('<div />', {
+		'id' : fcontact_overlay_id
+	});
+	var html = '<div class="message"><span class="text"></span></div><div class="dialog"><p class="title"></p><p class="text"></p><div class="control"><input type="button" class="close" value="Close" /></div></div>';
+	element.html(html);
+	jQuery('body').append(element);
+
+//	overlay = jQuery('#' + selector);
+}
+
 /*
  * オーバーレイを表示
  */
 function showOverlay(cls, text, fade) {
-	overlay = jQuery('#fcontact .overlay');
-	target = jQuery('#fcontact .overlay .' + cls);
+	var overlay = jQuery('#' + fcontact_overlay_id);
+	var target = jQuery('#' + fcontact_overlay_id + ' .' + cls);
 	target.find('.text').html(text);
 
 	if (typeof(fade)==='undefined' || fade===true) {
@@ -127,6 +142,7 @@ function showOverlay(cls, text, fade) {
  * オーバーレイを隠す
  */
 function hideOverlay(cls, fade) {
+	var overlay = jQuery('#' + fcontact_overlay_id);
 	if (typeof(fade)==='undefined' || fade===true) {
 		overlay.removeClass(cls).fadeOut('fast');
 	} else {

@@ -3,7 +3,7 @@
  * Plugin Name: FContactForm
  * Plugin URI: http://something-25.com
  * Description: Facebookアカウントを利用したコンタクトフォーム
- * Version: 0.1
+ * Version: 0.1.1
  * Author: oyakata-s
  * Author URI: http://something-25.com
  *
@@ -72,7 +72,12 @@ function get_fcontact_host() {
  */
 function get_fcontact_version() {
 	$data = get_file_data( __FILE__, array( 'version' => 'Version' ) );
-	return $data['version'];
+	$version = $data['version' ];
+	if ($version < '1.0') {
+		return date('0.Ymd.Hi');
+	} else {
+		return $version;
+	}
 }
 
 /*

@@ -32,7 +32,7 @@
 	display: none;
 }
 #fcontact .contact-form input.logout {
-	float: right;
+	/*float: right;*/
 }
 #fcontact.confirm .contact-form input.submit {
 	display: none;
@@ -54,7 +54,7 @@
 	font-style: oblique;
 }
 
-#fcontact .overlay {
+#fcontact-overlay {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -65,11 +65,11 @@
 	background-color: rgba(0,0,0,0.7);
 }
 
-#fcontact .overlay .message, #fcontact .overlay .dialog {
+#fcontact-overlay .message, #fcontact-overlay .dialog {
 	display: none;
 }
 
-#fcontact .overlay.message .message {
+#fcontact-overlay.message .message {
 	display: block;
 	position: absolute;
 	right: 0;
@@ -82,7 +82,7 @@
 	animation: flashing 1.5s infinite;
 }
 
-#fcontact .overlay.dialog .dialog {
+#fcontact-overlay.dialog .dialog {
 	display: block;
 	position: absolute;
 	right: 0;

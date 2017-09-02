@@ -10,7 +10,7 @@
 	</div>
 
 	<form class="contact-form" method="POST">
-		<h3><?php _e('Contact Us', 'fcontact'); ?></h3>
+		<h3 class="contact-us"><?php _e('Contact Us', 'fcontact'); ?></h3>
 		<input type="hidden" name="action" value="fcontact_sendmail">
 		<input type="hidden" class="fbid" name="fbid" value="">
 		<input type="hidden" class="name" name="name" value="" disabled>
@@ -24,7 +24,7 @@
 	</form>
 
 	<div class="confirm-area" style="display: none;">
-		<h3><?php _e('Please confirm', 'fcontact'); ?></h3>
+		<h3 class='please-confirm'><?php _e('Please confirm', 'fcontact'); ?></h3>
 		<div class="label"><?php _e('Name'); ?></div>
 		<div class="name value"></div>
 		<div class="label"><?php _e('Email'); ?></div>
@@ -33,16 +33,6 @@
 		<div class="message value"></div>
 		<input class="submit" type="submit" value="<?php _e('Send', 'fcontact') ?>" />
 		<input class="cancel" type="reset" value="<?php	_e('Cancel', 'fcontact'); ?>" />
-	</div>
-
-	<div class="overlay">
-		<div class="message">
-			<span class="text"><?php _e('Sending...', 'fcontact'); ?></span>
-		</div>
-		<div class="dialog">
-			<p class="text"><?php _e('Facebook Application is not activated.', 'fcontact'); ?></p>
-			<button type="button" class="close"><?php _e('Close', 'fcontact'); ?></button>
-		</div>
 	</div>
 
 </div>
