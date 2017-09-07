@@ -3,7 +3,7 @@
  * Plugin Name: FContactForm
  * Plugin URI: http://something-25.com
  * Description: Facebookアカウントを利用したコンタクトフォーム
- * Version: 0.1.1
+ * Version: 0.1.2
  * Author: oyakata-s
  * Author URI: http://something-25.com
  *
@@ -122,6 +122,7 @@ var fb_activate = false;
  */
 function add_fcontact_footer_script() {
 ?>
+<div id="fb-root"></div>
 <script>
 var fb_activate = false;
 window.fbAsyncInit = function() {
