@@ -1,5 +1,5 @@
 <div class="wrap">
-	<h2><?php _e('FContact Setting', 'fcontact'); ?></h2>
+	<h2><?php _e('Contact Setting', 'fcontact'); ?></h2>
 	<form method="POST" action="options.php">
 <?php
 		settings_fields( 'fcontact_settings_group' );

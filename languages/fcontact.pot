@@ -1,10 +1,9 @@
-# Loco Gettext template
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: FContactForm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb 06 2017 19:29:50 GMT+0900 (JST)\n"
+"POT-Creation-Date: 2017-09-16 12:40+0000\n"
 "POT-Revision-Date: Tue Apr 04 2017 19:35:42 GMT+0900 (JST)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -24,55 +23,33 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#. Name of the plugin
-msgid "FContactForm"
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:160
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:161
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:2
+msgid "Contact Setting"
 msgstr ""
 
-#. URI of the plugin
-msgid "http://something-25.com/plugin"
-msgstr ""
-
-#. Description of the plugin
-msgid "Facebookアカウントを利用したコンタクトフォーム"
-msgstr ""
-
-#. Author of the plugin
-msgid "oyakata"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "http://something-25.com"
-msgstr ""
-
-#: ../fcontact.php:157 ../fcontact.php:158 ../parts/admin-fcontact.php:2
-msgid "FContact Setting"
-msgstr ""
-
-#: ../fcontact.php:191
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
-
-#: ../fcontact.php:211
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:214
 msgid "You got a message."
 msgstr ""
 
-#: ../fcontact.php:214
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:217
 msgid ""
 "I received a message on your website.\n"
 "The message is as follow.\n"
 msgstr ""
 
-#: ../fcontact.php:217
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:220
 msgid ""
 "This e-mail has been sent automatically from the program.\n"
 "Reply to this email address is not possible.\n"
 msgstr ""
 
-#: ../fcontact.php:222
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:225
 msgid "Thank you for contacting me."
 msgstr ""
 
-#: ../fcontact.php:225
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:228
 #, php-format
 msgid ""
 "Dear, %s\n"
@@ -81,262 +58,267 @@ msgid ""
 "Your message is as follow.\n"
 msgstr ""
 
-#: ../fcontact.php:228
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:231
 msgid "Failed to send your message."
 msgstr ""
 
-#: ../inc/sendmail.php:19
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:19
 msgid "Facebook Authentication Failed."
 msgstr ""
 
-#: ../inc/sendmail.php:44
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:44
 msgid "Send Mail Error"
 msgstr ""
 
-#: ../inc/sendmail.php:198
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:198
 msgid "Facebook ID is different."
 msgstr ""
 
-#: ../inc/sendmail.php:203
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:203
 msgid "Invalid e-mail address format."
 msgstr ""
 
-#: ../parts/admin-fcontact.php:9
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:9
 msgid "Setting: Facebook"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:12
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:12
 msgid "Application ID"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:14
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:14
 msgid "input application id"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:19
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:19
 msgid "Application Secret"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:21
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:21
 msgid "input application secret"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:27
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:27
 msgid "Setting: Mail Common"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:30
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:30
 msgid "Add Confirm"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:33
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:33
 msgid "Enable Confirm"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:38
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:38
 msgid "Mail From"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:40
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:40
 msgid "From Address"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:42
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:42
 msgid "From Name"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:48
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:48
 msgid "Mail Footer"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:55
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:55
 msgid "Error Message"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:63
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:63
 msgid "Setting: Admin Mail"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:66
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:66
 msgid "Mail To"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:73 ../parts/admin-fcontact.php:106
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:73
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:106
 msgid "Mail Header"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:80 ../parts/admin-fcontact.php:113
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:80
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:113
 msgid "Mail Subject"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:87 ../parts/admin-fcontact.php:120
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:87
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:120
 msgid "Mail Body"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:95
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:95
 msgid "Setting: Reply Mail"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:98
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:98
 msgid "Auto Reply"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:101
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:101
 msgid "Enable Reply"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:128
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:128
 msgid "Setting: SMTP"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:131
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:131
 msgid "Use SMTP"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:134
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:134
 msgid "Send email via SMTP"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:139
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:139
 msgid "SMTP Server"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:141
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:141
 msgid "SMTP Host"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:142
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:142
 msgid "input smtp host"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:143
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:143
 msgid "SMTP Port"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:144
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:144
 msgid "input smtp port"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:149
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:149
 msgid "Encryption"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:151
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:151
 msgid "No encryption"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:152
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:152
 msgid "Use SSL encryption"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:153
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:153
 msgid "Use TLS encryption"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:158
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:158
 msgid "Authentication"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:161
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:161
 msgid "Use SMTP Authentication"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:162
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:162
 msgid "Username"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:163
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:163
 msgid "input username"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:164
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:164
 msgid "Password"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:165
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:165
 msgid "input password"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:171
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:171
 msgid "Setting: Other"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:174
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:174
 msgid "Database Backup"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:177
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:177
 msgid "Enable Backup"
 msgstr ""
 
-#: ../parts/admin-fcontact.php:178
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:178
 msgid "CSV Export"
 msgstr ""
 
-#: ../parts/fcontact-form.php:4
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:4
 msgid "Thank you! "
 msgstr ""
 
-#: ../parts/fcontact-form.php:5
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:5
 msgid "Transmission Error."
 msgstr ""
 
-#: ../parts/fcontact-form.php:9
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:9
 msgid "Back"
 msgstr ""
 
-#: ../parts/fcontact-form.php:13
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:13
 msgid "Contact Us"
 msgstr ""
 
-#: ../parts/fcontact-form.php:18 ../parts/fcontact-form.php:32
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:18
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:32
 msgid "Message"
 msgstr ""
 
-#: ../parts/fcontact-form.php:19
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:19
 msgid "Please enter a message"
 msgstr ""
 
-#: ../parts/fcontact-form.php:20 ../parts/fcontact-form.php:34
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:20
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:34
 msgid "Send"
 msgstr ""
 
-#: ../parts/fcontact-form.php:21
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:21
 msgid "Confirm"
 msgstr ""
 
-#: ../parts/fcontact-form.php:22
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:22
 msgid "Clear"
 msgstr ""
 
-#: ../parts/fcontact-form.php:23
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:23
 msgid "Logout"
 msgstr ""
 
-#: ../parts/fcontact-form.php:27
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:27
 msgid "Please confirm"
 msgstr ""
 
-#: ../parts/fcontact-form.php:28
-msgid "Name"
-msgstr ""
-
-#: ../parts/fcontact-form.php:30
-msgid "Email"
-msgstr ""
-
-#: ../parts/fcontact-form.php:35
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:35
 msgid "Cancel"
 msgstr ""
 
-#: ../parts/fcontact-form.php:40
-msgid "Sending..."
+#. Name of the plugin
+msgid "FContactForm"
 msgstr ""
 
-#: ../parts/fcontact-form.php:43
-msgid "Facebook Application is not activated."
+#. Description of the plugin
+msgid "Facebookアカウントを利用したコンタクトフォーム"
 msgstr ""
 
-#: ../parts/fcontact-form.php:44
-msgid "Close"
+#. URI of the plugin
+msgid "https://github.com/oyakata-s/fcontact"
+msgstr ""
+
+#. Author of the plugin
+msgid "oyakata-s"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://something-25.com"
 msgstr ""

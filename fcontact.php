@@ -1,9 +1,9 @@
 <?php
 /*
  * Plugin Name: FContactForm
- * Plugin URI: http://something-25.com
+ * Plugin URI: https://github.com/oyakata-s/fcontact
  * Description: Facebookアカウントを利用したコンタクトフォーム
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: oyakata-s
  * Author URI: http://something-25.com
  *
@@ -14,8 +14,10 @@
 /*
  * 定数定義
  */
-define( 'FCONTACT_DEBUG', true );		// デバッグモード
+define( 'FCONTACT_DEBUG', false );		// デバッグモード
 define( 'FCONTACT_DIR_PATH', plugin_dir_path( __FILE__ ) );		// 本プラグイディレクトリへのパス
+define( 'FCONTACT_DIR_URL', plugin_dir_url( __FILE__ ) );			// 本プラグイディレクトリへのURL
+
 
 require_once FCONTACT_DIR_PATH . 'inc/sendmail.php';		// お問い合わせページ関数
 require_once FCONTACT_DIR_PATH . 'inc/download.php';		// CSVダウンロード用関数
@@ -32,7 +34,8 @@ function fcontact_init() {
 	add_action( 'admin_menu', 'add_menu_fcontactsetting' );
 
 	// 管理画面用script
-	add_action( 'admin_print_footer_scripts', 'add_fcontact_admin_script' );
+	$hook_sfx = 'settings_page_create_fcontact_options';
+	add_action( 'admin_print_footer_scripts-'.$hook_sfx, 'fcontact_admin_print_footer_script' );
 
 	// ajax通信用
 	add_action( 'wp_ajax_fcontact_sendmail', 'fcontact_sendmail' );
@@ -84,23 +87,23 @@ function get_fcontact_version() {
  * script読込
  */
 function fcontact_enqueue_scripts() {
-	wp_enqueue_script('plugin-fcontact', plugin_dir_url( __FILE__ ) . 'js/fcontact.js', array(), get_fcontact_version(), true);
+	wp_enqueue_script('plugin-fcontact', FCONTACT_DIR_URL . 'js/fcontact.js', array(), get_fcontact_version(), true);
 }
 
 /*
  * style読み込み
  */
 function fcontact_print_styles() {
-	wp_enqueue_style('plugin-fcontact', plugin_dir_url( __FILE__ ) . 'css/style.css', array(), get_fcontact_version(), 'all');
+	wp_enqueue_style('plugin-fcontact', FCONTACT_DIR_URL . 'css/style.css', array(), get_fcontact_version(), 'all');
 }
 
 /*
  * 管理画面のみ必要なJS読み込み
  */
-function add_fcontact_admin_script() {
+function fcontact_admin_print_footer_script() {
 ?>
-<script src="<?php echo plugin_dir_url(__FILE__); ?>js/download.js"></script>
-<script src="<?php echo plugin_dir_url(__FILE__); ?>js/encoding.min.js"></script>
+<script src="<?php echo FCONTACT_DIR_URL; ?>js/download.js"></script>
+<script src="<?php echo FCONTACT_DIR_URL; ?>js/encoding.min.js"></script>
 <?php
 }
 
@@ -110,8 +113,8 @@ function add_fcontact_admin_script() {
 function add_fcontact_header_script() {
 ?>
 <script>
-var ajaxurl = '<?php echo admin_url( 'admin-ajax.php'); ?>';
-var appId = '<?php echo get_option('fcontact_app_id') ?>';
+var ajaxurl = '<?php echo admin_url( 'admin-ajax.php' ); ?>';
+var appId = '<?php echo get_option( 'fcontact_app_id' ) ?>';
 var fb_activate = false;
 </script>
 <?php
@@ -154,8 +157,8 @@ window.fbAsyncInit = function() {
  */
 function add_menu_fcontactsetting() {
 	add_options_page(
-		__('FContact Setting', 'fcontact'),
-		__('FContact Setting', 'fcontact'),
+		__('Contact Setting', 'fcontact'),
+		__('Contact Setting', 'fcontact'),
 		'manage_options',
 		'create_fcontact_options',
 		'create_fcontact_options');

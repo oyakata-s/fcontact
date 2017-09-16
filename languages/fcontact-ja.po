@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: FContactForm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb 06 2017 19:29:50 GMT+0900 (JST)\n"
-"PO-Revision-Date: Tue Apr 04 2017 19:38:13 GMT+0900 (JST)\n"
+"POT-Creation-Date: 2017-09-16 12:40+0000\n"
+"PO-Revision-Date: 2017-09-16 12:41+0000\n"
 "Last-Translator: satohru <satohru_f@yahoo.co.jp>\n"
-"Language-Team: \n"
-"Language: Japanese\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,77 +22,59 @@ msgstr ""
 "X-Loco-Target-Locale: ja_JP\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#. Name of the plugin
-msgid "FContactForm"
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:12
+msgid "Application ID"
 msgstr ""
 
-#. URI of the plugin
-msgid "http://something-25.com/plugin"
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:19
+msgid "Application Secret"
+msgstr ""
+
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:162
+msgid "Username"
+msgstr ""
+
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:164
+msgid "Password"
+msgstr ""
+
+#. Name of the plugin
+msgid "FContactForm"
 msgstr ""
 
 #. Description of the plugin
 msgid "Facebookアカウントを利用したコンタクトフォーム"
 msgstr ""
 
+#. URI of the plugin
+msgid "https://github.com/oyakata-s/fcontact"
+msgstr ""
+
 #. Author of the plugin
-msgid "oyakata"
+msgid "oyakata-s"
 msgstr ""
 
 #. Author URI of the plugin
 msgid "http://something-25.com"
 msgstr ""
 
-#: ../fcontact.php:191
-msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:160
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:161
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:2
+msgid "Contact Setting"
+msgstr "問い合わせ設定"
 
-#: ../inc/sendmail.php:198
-msgid "Facebook ID is different."
-msgstr "Facebook IDが違います"
-
-#: ../parts/admin-fcontact.php:12
-msgid "Application ID"
-msgstr ""
-
-#: ../parts/admin-fcontact.php:19
-msgid "Application Secret"
-msgstr ""
-
-#: ../parts/admin-fcontact.php:131
-msgid "Use SMTP"
-msgstr "SMTPを使用"
-
-#: ../parts/admin-fcontact.php:134
-msgid "Send email via SMTP"
-msgstr "メール送信にSMTPを使用する"
-
-#: ../parts/admin-fcontact.php:139
-msgid "SMTP Server"
-msgstr "サーバー"
-
-#: ../parts/admin-fcontact.php:162
-msgid "Username"
-msgstr ""
-
-#: ../parts/admin-fcontact.php:164
-msgid "Password"
-msgstr ""
-
-#: ../fcontact.php:157 ../fcontact.php:158 ../parts/admin-fcontact.php:2
-msgid "FContact Setting"
-msgstr "FContact設定"
-
-#: ../fcontact.php:211
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:214
 msgid "You got a message."
 msgstr "メールが届きました。"
 
-#: ../fcontact.php:214
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:217
 msgid ""
 "I received a message on your website.\n"
 "The message is as follow.\n"
 msgstr "ウェブサイトに、以下のとおりメッセージが届きました。"
 
-#: ../fcontact.php:217
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:220
 msgid ""
 "This e-mail has been sent automatically from the program.\n"
 "Reply to this email address is not possible.\n"
@@ -100,11 +82,11 @@ msgstr ""
 "このメールはプログラムから自動で送信されています。\n"
 "本メールアドレスへの返信はできません。"
 
-#: ../fcontact.php:222
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:225
 msgid "Thank you for contacting me."
 msgstr "お問い合わせありがとうございます。"
 
-#: ../fcontact.php:225
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:228
 #, php-format
 msgid ""
 "Dear, %s\n"
@@ -117,230 +99,231 @@ msgstr ""
 "お問い合わせいただき、ありがとうございます。\n"
 "お問い合わせ内容は下記のとおりです。"
 
-#: ../fcontact.php:228
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/fcontact.php:231
 msgid "Failed to send your message."
 msgstr "メッセージの送信に失敗しました。"
 
-#: ../inc/sendmail.php:19
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:19
 msgid "Facebook Authentication Failed."
 msgstr "Facebook認証に失敗しました。"
 
-#: ../inc/sendmail.php:44
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:44
 msgid "Send Mail Error"
 msgstr "メール送信エラーです"
 
-#: ../inc/sendmail.php:203
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:198
+msgid "Facebook ID is different."
+msgstr "Facebook IDが違います"
+
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/inc/sendmail.php:203
 msgid "Invalid e-mail address format."
 msgstr "メールアドレスの形式が違います。"
 
-#: ../parts/admin-fcontact.php:9
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:9
 msgid "Setting: Facebook"
 msgstr "Facebook設定"
 
-#: ../parts/admin-fcontact.php:14
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:14
 msgid "input application id"
 msgstr "application id を入力してください。"
 
-#: ../parts/admin-fcontact.php:21
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:21
 msgid "input application secret"
 msgstr "application secret を入力してください。"
 
-#: ../parts/admin-fcontact.php:27
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:27
 msgid "Setting: Mail Common"
 msgstr "メール共通設定"
 
-#: ../parts/admin-fcontact.php:30
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:30
 msgid "Add Confirm"
 msgstr "確認を表示"
 
-#: ../parts/admin-fcontact.php:33
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:33
 msgid "Enable Confirm"
 msgstr "送信前に確認する"
 
-#: ../parts/admin-fcontact.php:38
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:38
 msgid "Mail From"
 msgstr "メール送信元"
 
-#: ../parts/admin-fcontact.php:40
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:40
 msgid "From Address"
 msgstr "送信元アドレス"
 
-#: ../parts/admin-fcontact.php:42
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:42
 msgid "From Name"
 msgstr "送信者名"
 
-#: ../parts/admin-fcontact.php:48
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:48
 msgid "Mail Footer"
 msgstr "メールフッター"
 
-#: ../parts/admin-fcontact.php:55
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:55
 msgid "Error Message"
 msgstr "送信失敗時メッセージ"
 
-#: ../parts/admin-fcontact.php:63
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:63
 msgid "Setting: Admin Mail"
 msgstr "管理者宛メール設定"
 
-#: ../parts/admin-fcontact.php:66
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:66
 msgid "Mail To"
 msgstr "宛先"
 
-#: ../parts/admin-fcontact.php:73 ../parts/admin-fcontact.php:106
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:73
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:106
 msgid "Mail Header"
 msgstr "ヘッダー"
 
-#: ../parts/admin-fcontact.php:80 ../parts/admin-fcontact.php:113
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:80
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:113
 msgid "Mail Subject"
 msgstr "タイトル"
 
-#: ../parts/admin-fcontact.php:87 ../parts/admin-fcontact.php:120
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:87
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:120
 msgid "Mail Body"
 msgstr "本文"
 
-#: ../parts/admin-fcontact.php:95
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:95
 msgid "Setting: Reply Mail"
 msgstr "自動返信メール設定"
 
-#: ../parts/admin-fcontact.php:98
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:98
 msgid "Auto Reply"
 msgstr "自動返信"
 
-#: ../parts/admin-fcontact.php:101
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:101
 msgid "Enable Reply"
 msgstr "自動返信を有効にする"
 
-#: ../parts/admin-fcontact.php:128
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:128
 msgid "Setting: SMTP"
 msgstr "SMTP設定"
 
-#: ../parts/admin-fcontact.php:141
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:131
+msgid "Use SMTP"
+msgstr "SMTPを使用"
+
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:134
+msgid "Send email via SMTP"
+msgstr "メール送信にSMTPを使用する"
+
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:139
+msgid "SMTP Server"
+msgstr "サーバー"
+
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:141
 msgid "SMTP Host"
 msgstr "ホスト名"
 
-#: ../parts/admin-fcontact.php:142
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:142
 msgid "input smtp host"
 msgstr "ホスト名を入力してください"
 
-#: ../parts/admin-fcontact.php:143
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:143
 msgid "SMTP Port"
 msgstr "ポート番号"
 
-#: ../parts/admin-fcontact.php:144
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:144
 msgid "input smtp port"
 msgstr "ポート番号を入力してください"
 
-#: ../parts/admin-fcontact.php:149
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:149
 msgid "Encryption"
 msgstr "暗号化"
 
-#: ../parts/admin-fcontact.php:151
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:151
 msgid "No encryption"
 msgstr "暗号化なし"
 
-#: ../parts/admin-fcontact.php:152
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:152
 msgid "Use SSL encryption"
 msgstr "SSL暗号"
 
-#: ../parts/admin-fcontact.php:153
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:153
 msgid "Use TLS encryption"
 msgstr "TLS暗号"
 
-#: ../parts/admin-fcontact.php:158
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:158
 msgid "Authentication"
 msgstr "認証"
 
-#: ../parts/admin-fcontact.php:161
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:161
 msgid "Use SMTP Authentication"
 msgstr "SMTP認証を使用する"
 
-#: ../parts/admin-fcontact.php:163
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:163
 msgid "input username"
 msgstr "usernameを入力してください"
 
-#: ../parts/admin-fcontact.php:165
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:165
 msgid "input password"
 msgstr "passwordを入力してください"
 
-#: ../parts/admin-fcontact.php:171
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:171
 msgid "Setting: Other"
 msgstr "その他設定"
 
-#: ../parts/admin-fcontact.php:174
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:174
 msgid "Database Backup"
 msgstr "データベースバックアップ"
 
-#: ../parts/admin-fcontact.php:177
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:177
 msgid "Enable Backup"
 msgstr "データベースにバックアップする"
 
-#: ../parts/admin-fcontact.php:178
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/admin-fcontact.php:178
 msgid "CSV Export"
 msgstr "CSV出力"
 
-#: ../parts/fcontact-form.php:4
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:4
 msgid "Thank you! "
 msgstr "ありがとうございます！"
 
-#: ../parts/fcontact-form.php:5
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:5
 msgid "Transmission Error."
 msgstr "メール送信に失敗しました。"
 
-#: ../parts/fcontact-form.php:9
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:9
 msgid "Back"
 msgstr "戻る"
 
-#: ../parts/fcontact-form.php:13
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:13
 msgid "Contact Us"
 msgstr "お問い合わせはこちら"
 
-#: ../parts/fcontact-form.php:18 ../parts/fcontact-form.php:32
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:18
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:32
 msgid "Message"
 msgstr "メッセージ"
 
-#: ../parts/fcontact-form.php:19
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:19
 msgid "Please enter a message"
 msgstr "お問い合わせ内容を入力してください。"
 
-#: ../parts/fcontact-form.php:20 ../parts/fcontact-form.php:34
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:20
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:34
 msgid "Send"
 msgstr "送信"
 
-#: ../parts/fcontact-form.php:21
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:21
 msgid "Confirm"
 msgstr "確認"
 
-#: ../parts/fcontact-form.php:22
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:22
 msgid "Clear"
 msgstr "消去"
 
-#: ../parts/fcontact-form.php:23
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:23
 msgid "Logout"
 msgstr "ログアウト"
 
-#: ../parts/fcontact-form.php:27
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:27
 msgid "Please confirm"
 msgstr "ご確認ください"
 
-#: ../parts/fcontact-form.php:28
-msgid "Name"
-msgstr "お名前"
-
-#: ../parts/fcontact-form.php:30
-msgid "Email"
-msgstr "メールアドレス"
-
-#: ../parts/fcontact-form.php:35
+#: Users/satohru/Dropbox/Dev/git/wordpress/wp-content/plugins/fcontact/parts/fcontact-form.php:35
 msgid "Cancel"
 msgstr "キャンセル"
-
-#: ../parts/fcontact-form.php:40
-msgid "Sending..."
-msgstr "送信中…"
-
-#: ../parts/fcontact-form.php:43
-msgid "Facebook Application is not activated."
-msgstr "Facebookアプリケーションが有効ではありません。"
-
-#: ../parts/fcontact-form.php:44
-msgid "Close"
-msgstr "閉じる"
