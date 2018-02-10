@@ -1,68 +1,68 @@
 <?php
-
 /*
  * CSVダウンロード
  */
+require_once FCONTACT_DIR_PATH . '/inc/utils/class-contactdb.php';		// データベース操作関数
+require_once FCONTACT_DIR_PATH . '/inc/utils/class-csv-utils.php';		// CSV操作関数
 
 function fcontact_download() {
 
-	require_once FCONTACT_DIR_PATH . '/inc/database.php';		// データベース操作関数
+	/* 
+	 * CSV操作用オブジェクト生成
+	 */
+	$csv = new CsvUtils( array(
+		'id',
+		'receive_time',
+		'facebook_id',
+		'name',
+		'mail',
+		'message'
+	) );
 
-	// ファイル名
-	$file_path = FCONTACT_DIR_PATH . 'database/export.csv';
-
-	// CSVに出力するタイトル行
-	$export_csv_title = array(
-		add_quote('id'),
-		add_quote('受信日時'),
-		add_quote('FacebookID'),
-		add_quote('名前'),
-		add_quote('メール'),
-		add_quote('メッセージ') );
-
-	if (touch($file_path)) {
-
-		// オブジェクト生成
-		$file = new SplFileObject( $file_path, 'w' );
-
-		// タイトル行出力
-		$file->fputcsv($export_csv_title);
-
-		// データベースから取得して出力
-		$db = new ContactDb(FCONTACT_DIR_PATH . 'database/contact.db');
-		$results = $db->select();
-		if ($results != false) {
-			while($row = $results->fetchArray()) {
-				$output = array(
-					add_quote($row['id']),
-					add_quote($row['create_at']),
-					add_quote($row['fbid']),
-					add_quote($row['name']),
-					add_quote($row['mail']),
-					add_quote($row['message']));
-				$file->fputcsv($output);
-			}
+	// データベースから取得して出力
+	/* 
+	 * データベースに接続し、全行を取得
+	 * CSVに追加
+	 */
+	$db = new ContactDb( FCONTACT_DIR_PATH . 'database/contact.db' );
+	$results = $db->select();
+	if ( $results != false ) {
+		while( $row = $results->fetchArray() ) {
+			$csv->putLine( array(
+				$row[ 'id' ],
+				$row[ 'create_at' ],
+				$row[ 'fbid' ],
+				$row[ 'name' ],
+				$row[ 'mail' ],
+				$row[ 'message' ]
+			) );
 		}
-		$db->close();
+	}
+	$db->close();
+
+	/* 
+	 * 一時ファイルにCSVを出力
+	 */
+	$file_path = FCONTACT_DIR_PATH . 'database/export.csv';
+	try {
+		$csv->outputFile( $file_path );
+	} catch ( Exception $e ) {
+		error_log( $e->getMessage() );
+		die();
 	}
 
 	// ダウンロード用
-	header('Pragma: public'); // required
-	header('Expires: 0');
-	header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-	header('Cache-Control: private', false); // required for certain browsers
-	header('Content-Type: application/force-download');
-	header('Content-Length: ' . filesize($file_path));
-	header('Content-Disposition: attachment; filename="' . basename($file_path) . '"');
-	header('Content-Transfer-Encoding: binary');
-	readfile($file_path);
+	header( 'Pragma: public' ); // required
+	header( 'Expires: 0' );
+	header( 'Cache-Control: must-revalidate, post-check=0, pre-check=0' );
+	header( 'Cache-Control: private', false ); // required for certain browsers
+	header( 'Content-Type: application/force-download' );
+	header( 'Content-Length: ' . filesize( $file_path ) );
+	header( 'Content-Disposition: attachment; filename="' . basename( $file_path ) . '"' );
+	header( 'Content-Transfer-Encoding: binary' );
+	readfile( $file_path);
 
 	die();
-}
-
-function add_quote( $str ) {
-	// return '"' . $str . '"';
-	return $str;
 }
 
 ?>

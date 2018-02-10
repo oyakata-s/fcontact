@@ -1,0 +1,9 @@
+@charset "UTF-8";@keyframes success{0%{background-color:rgba(172,219,218,0.9)}100%{background-color:rgba(172,219,218,0)}}@keyframes error{0%{background-color:rgba(226,178,205,0.9)}
+100%{background-color:rgba(226,178,205,0)}}#fcontact .result-area{display:none;margin-bottom:2.0rem;padding:1.5rem;border:1px solid #ccc;border-radius:10px;box-shadow:0 5px 15px -5px #333}
+#fcontact .result-area.success{display:block;animation:success 3s forwards}#fcontact .result-area.success .error{display:none}#fcontact .result-area.error{display:block;animation:error 3s forwards}
+#fcontact .result-area.error .success{display:none}#fcontact .result-area .title{margin-top:0;margin-bottom:1.0em}#fcontact .result-area.success .title:before{font-family:'icomoon';margin-right:.5em;vertical-align:middle;content:'\f058'}
+#fcontact .result-area.error .title:before{font-family:'icomoon';margin-right:.5em;vertical-align:middle;content:'\f06a'}
+#fcontact .result-area .description{margin-top:0;margin-bottom:1.0em}#fcontact .result-area .cause{padding:0 1.0em;font-style:oblique;color:#666}#fcontact .contact-form{margin-bottom:2.0rem}
+#fcontact .contact-form label{display:block}#fcontact .contact-form input{margin-top:.5em}#fcontact .contact-form textarea{background:#f7f7f7;background-image:-webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0));border:1px solid #d1d1d1;border-radius:2px;color:#686868;padding:.625em .4375em;width:100%}
+#fcontact .contact-form textarea:focus{background-color:#fff;border-color:#007acc;color:#1a1a1a;outline:0}#fcontact .contact-form textarea[readonly],#fcontact .contact-form input[disabled]{opacity:.5;pointer-events:none}
+#fcontact.logout .contact-form input.logout{display:none}#simple-overlay p{margin:0}#simple-overlay .dialog button{margin:5px}

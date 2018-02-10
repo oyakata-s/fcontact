@@ -1,0 +1,78 @@
+/*
+ * #simple-overlay
+ */
+#simple-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#simple-overlay .message {
+	display: none;
+	position: absolute;
+	width: 100%;
+	margin: auto;
+	color: #fff;
+	text-align: center;
+
+	animation: flashing 1.5s infinite;	
+}
+#simple-overlay .dialog {
+	display: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+	width: 90vw;
+	max-width: 300px;
+	margin: auto;
+	border: 3px solid #000;
+	background-color: #fff;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+#simple-overlay.message .message,
+#simple-overlay.dialog .dialog {
+	display: block;
+}
+
+#simple-overlay .dialog .title {
+	display: none;
+	padding: 0.5em 1.0em 0 1.0em;
+	font-weight: bold;
+}
+#simple-overlay .dialog .text {
+	padding: 0.5em 1.0em;
+}
+
+#simple-overlay .dialog .control {
+	display: flex;
+}
+#simple-overlay .dialog button.OK, #simple-overlay .dialog button.Cancel {
+	flex: 1;
+	padding: 0.5em 1.0em;
+	text-align: center;
+	cursor: pointer;
+
+	-webkit-appearance: none;
+}
+
+/*
+ * animation
+ */
+@keyframes flashing {
+	0% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,84 @@
+@charset "UTF-8";
+/*
+ * 管理画面用スタイル
+ */
+
+input[type=text], input[type=number] {
+	width: 90%;
+}
+textarea {
+	width: 90%;
+}
+
+fieldset > label {
+	width: 150px;
+	white-space: nowrap;
+}
+label + input[type=text], label + input[type=password] {
+	width: 50%;
+}
+
+.form-table td {
+	width: 80%;
+}
+
+/*
+ * タブ
+ */
+#settings-tab {
+	display: flex;
+	margin-bottom: 0;
+	border-bottom: 1px solid #aaa;
+}
+
+#settings-tab li {
+	flex: 1;
+	margin: 0 4px -1px;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #aaa;
+}
+#settings-tab li.active {
+	border-top: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #f5f5f5;
+	border-left: 1px solid #aaa;
+	background-color: #f5f5f5;
+}
+
+#settings-tab li a {
+	display: block;
+	padding: 1.0rem 2.0rem;
+	color: #333;
+	font-size: 1.2em;
+	text-decoration: none;
+	text-align: center;
+}
+#settings-tab li a:focus {
+	box-shadow: none;
+}
+
+/*
+ * タブ本体
+ */
+#tab-contents {
+	padding: 1.0rem 2.0rem;
+	border: 1px solid #aaa;
+	border-top: none;
+	background-color: #f5f5f5;
+	box-sizing: border-box;
+}
+
+#tab-contents .tab-content {
+	display: none;
+}
+
+#tab-contents .tab-content.active {
+	display: block;
+}
+
+/*
+ * #database-backup
+ */
+#database-backup label {
+	width: auto;
+}
