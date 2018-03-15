@@ -8,35 +8,24 @@ class FtBase {
 
 	protected $basefile = null;
 	protected $version = 0.1;
-	protected $options = null;
+	protected $setting = null;
 
 	/*
 	 * コンストラクタ
 	 */
-	public function __construct( $file, $options = null ) {
+	public function __construct( $file ) {
 		if ( empty( $file )  ) {
 			error_log( 'FtBase construction failed.' );
 			throw new Exception( 'FtBase construction failed.' );
 		}
 		$this->basesfile = $file;
-		$this->options = $options;
 
-		$data = get_file_data( $this->basefile, array( 'version' => 'Version' ) );
+		$data = get_file_data( $file, array( 'version' => 'Version' ) );
 		$this->version = $data['version' ];
 	}
 
-	/* 
-	 * オプション設定
-	 */
-	public function setOptions( $options ) {
-		$this->options = $options;
-	}
-
-	/* 
-	 * 全オプション取得
-	 */
-	public function getOptions() {
-		return $this->options;
+	public function setOptions( $setting ) {
+		$this->setting = $setting;
 	}
 
 	/* 
@@ -60,7 +49,7 @@ class FtBase {
 		} else if ( ! is_null( $default ) ) {
 			return $default;
 		} else {
-			return $this->options[ $key ];
+			return $this->setting->getOption( $key );
 		}
 	}
 
