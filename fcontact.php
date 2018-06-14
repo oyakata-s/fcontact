@@ -3,7 +3,7 @@
  * Plugin Name: FContactForm
  * Plugin URI: https://github.com/oyakata-s/fcontact
  * Description: Contact form using a Facebook account.
- * Version: 0.2.1
+ * Version: 0.2.2
  * Author: oyakata-s
  * Author URI: https://something-25.com
  * License: GNU General Public License v2 or later
@@ -34,6 +34,7 @@ require_once FCONTACT_DIR_PATH . 'inc/ajax/class-download-ajax.php';	// メー�
 require_once FCONTACT_DIR_PATH . 'inc/ajax/class-sendmail-ajax.php';	// CSVダウンロード用
 
 require_once FCONTACT_DIR_PATH . 'inc/base/class-ft-base.php';		// ベースクラス
+require_once FCONTACT_DIR_PATH . 'inc/base/class-ft-utils.php';			// ユーティリティ関連
 
 class FContact extends FtBase {
 
@@ -79,8 +80,8 @@ class FContact extends FtBase {
 	 */
 	public function activation() {
 		// ディレクトリの準備
-		$this->checkDirectory( FCONTACT_DATABASE_DIR_PATH );
-		$this->checkDirectory( FCONTACT_DEBUG_DIR_PATH );
+		FtUtils::checkDirectory( FCONTACT_DATABASE_DIR_PATH );
+		FtUtils::checkDirectory( FCONTACT_DEBUG_DIR_PATH );
 
 		$this->createContactPage();
 	}
@@ -90,8 +91,8 @@ class FContact extends FtBase {
 	 */
 	public function deactivation() {
 		// ディレクトリの削除
-		$this->removeDirectory( FCONTACT_DATABASE_DIR_PATH );
-		$this->removeDirectory( FCONTACT_DEBUG_DIR_PATH );
+		FtUtils::removeDirectory( FCONTACT_DATABASE_DIR_PATH );
+		FtUtils::removeDirectory( FCONTACT_DEBUG_DIR_PATH );
 
 		$this->deleteContactPage();
 	}
@@ -247,31 +248,6 @@ window.fbAsyncInit = function() {
 		} else {
 			update_option( 'fcontact_pageid', $page_check->ID );
 		}
-	}
-
-	/* 
-	 * ディレクトリ存在チェック
-	 */
-	private function checkDirectory( $dir ) {
-		if ( ! file_exists( $dir ) ) {
-			return wp_mkdir_p( $dir );
-		}
-
-		return false;
-	}
-
-	/* 
-	 * ディレクトリ削除
-	 */
-	private function removeDirectory( $dir ) {
-		if ( file_exists( $dir ) ) {
-			if ( WP_Filesystem() ) {
-				global $wp_filesystem;
-				return $wp_filesystem->delete( $dir, true );
-			}
-		}
-
-		return false;
 	}
 
 }

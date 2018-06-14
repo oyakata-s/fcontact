@@ -46,7 +46,14 @@ class FtSetting {
 			register_setting( $settings_group, $key );
 		}
 	}
-	
+
+	/* 
+	 * 設定値を追加
+	 */
+	public function addOption( $key, $value ) {
+		$this->options[ $key ] = $value;
+	}
+
 	/* 
 	 * オプション設定値を取得
 	 */
